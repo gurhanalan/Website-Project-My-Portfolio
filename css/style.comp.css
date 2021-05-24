@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap");
+/* /////////////////////////////////////
+BASE SECTION 
+//////////// */
+:root {
+  --color-primary: #c2a748;
+  --color-primary-light: #ccbd89;
+  --color-primary-dark: #8f7b35;
+  --color-secondary: #5c68e6;
+  --color-secondary-light: #808bff;
+  --color-secondary-dark: #2e3899;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: solid 0.1rem var(--color-grey-light-2); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 500px) {
+    html {
+      font-size: 50%; } }
+
+/* /////////////////////////////////////
+LAYOUT 
+//////////// */
+body {
+  font-family: "Roboto", sans-serif; }
+
+/* /////////////////////////////////////
+NAVBAR 
+//////////// */
+#navbar {
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #009c4c;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+  #navbar h1 {
+    font-family: "Miss Fajardose", cursive;
+    padding: 2rem 3rem; }
+
+.nav-links {
+  padding: 0 1rem;
+  display: flex;
+  gap: 1rem; }
+
+.nav-link {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: currentColor;
+  transition: all 0.2s; }
+  .nav-link:hover {
+    background-color: #00ab53; }
+
+/* /////////////////////////////////////
+WELCOME SECTION 
+//////////// */
+#welcome-section {
+  height: calc(100vh - 6rem);
+  background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(119, 119, 119, 0.3)), url(../img/hero2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.text-box {
+  background-color: rgba(0, 156, 76, 0.6);
+  padding: 5rem 7rem;
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  text-align: center;
+  animation: dropdown 2s 0.5s linear; }
+  .text-box h1 {
+    font-family: "Miss Fajardose", cursive;
+    font-size: 10rem; }
+  .text-box p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+
+@keyframes dropdown {
+  0% {
+    transform: scale(0.1) translateY(-400rem);
+    opacity: 0.1; }
+  50% {
+    transform: scale(0.1) translateY(0);
+    opacity: 1; }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1; } }
+
+/* /////////////////////////////////////
+PROJECTS SECTION
+//////////// */
+#projects {
+  padding: 8rem 5rem;
+  background-color: #f0eeee;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem; }
+  #projects h1 {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+
+.project-tiles {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.project-tile {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: currentColor;
+  text-transform: uppercase;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s; }
+  .project-tile img {
+    height: 21rem;
+    width: 28rem;
+    display: inline-block;
+    object-fit: cover;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2); }
+  .project-tile:hover {
+    transform: translateY(-4px); }
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem; }
+  .skills .iconify {
+    font-size: 8rem; }
+
+/* /////////////////////////////////////
+CONTACT 
+//////////// */
+#contact {
+  background-color: #333;
+  padding: 5rem 10rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.contact__links {
+  font-size: 1.6rem;
+  color: #faf9f9;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: all 0.2s; }
+  .contact__links:hover {
+    background-color: #777;
+    transform: translateY(-3px);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.438); }
+  .contact__links:active {
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.438); }
+  .contact__links .iconify {
+    font-size: 4rem; }
