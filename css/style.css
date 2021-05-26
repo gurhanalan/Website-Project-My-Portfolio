@@ -123,6 +123,8 @@ PROJECTS SECTION
     letter-spacing: 3px; }
 
 .project-tiles {
+  max-width: 120rem;
+  margin: 0 auto;
   display: flex;
   gap: 5rem;
   justify-content: center;
